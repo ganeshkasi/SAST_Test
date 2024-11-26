@@ -1,0 +1,13 @@
+title = "gitleaks config"
+
+[[rules]]
+description = "Generic API Key"
+regex = '''(?i)(api[_-]?key|secret|token)[\s]*[:=][\s]*['"]?[a-z0-9]{32,45}['"]?'''
+tags = ["apikey"]
+
+[[rules]]
+description = "AWS Access Key"
+regex = '''AKIA[0-9A-Z]{16}'''
+tags = ["aws", "key"]
+
+# Add more rules as needed
