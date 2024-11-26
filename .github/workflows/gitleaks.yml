@@ -1,0 +1,25 @@
+name: "Gitleaks Scan"
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch: # Allows manual triggering
+
+jobs:
+  gitleaks:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+
+    - name: Run Gitleaks
+      uses: gitleaks/gitleaks-action@v2
+      with:
+        args: "--config .gitleaks.toml"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
