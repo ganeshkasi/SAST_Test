@@ -1,0 +1,15 @@
+name: "Secret Detection"
+queries:
+  - name: "Security and Quality"
+    uses: github/codeql/java-queries@main
+  - name: "Security and Quality"
+    uses: github/codeql/javascript-queries@main
+  - name: "Security and Quality"
+    uses: github/codeql/python-queries@main
+  - name: "Secret Detection"
+    uses: github/codeql/java-queries@main/ql/src/Security/CWE/CWE-798
+  - name: "Secret Detection"
+    uses: github/codeql/javascript-queries@main/ql/src/Security/CWE/CWE-798
+  - name: "Secret Detection"
+    uses: github/codeql/python-queries@main/ql/src/Security/CWE/CWE-798
+  # Add other secret detection queries as needed
