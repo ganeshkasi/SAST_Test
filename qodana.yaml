@@ -10,7 +10,7 @@ profile:
 
 #Enable inspections
 #include:
-#  - name: <SomeEnabledInspectionId>
+#  - name: <SomeEnabledInspectionIddfa>
 
 #Disable inspections
 #exclude:
